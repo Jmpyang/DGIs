@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background-color: paleturquoise;
+    text-align: center;
+    line-height: 1.6;
+}
+header, nav, section {
+    padding: 0;
+    margin: 1em;
+}
+header h1 {
+    font-size: 2em;
+    color: blue;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav a:hover {
+    text-decoration: none;
+    padding: 3px;
+    transition: 0.006s;
+    color: red;
+  }
+.member, .portfolio-item, .resume{
+    text-align: center;
+    border: 2px solid #333;
+    box-shadow: 1px 5px 8px rgba(2, 4, 6, 8);
+    border-radius: 10px;
+    border-color: green ;
+    background-color: white;
+    margin: 1em;
+    padding: 20px;
+}
+@keyframes fadeIn {
+    from{opacity: 0; transform: translateY(20px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+.member:hover{
+    background-color: antiquewhite;
+    /*background: var(--light);*/
+    transition: 0.1s;
+    /*transform: translate(-10px);*/
+    /*transition: transform 1s ease;*/
+   /* animation: fadeIn 0.7s ease-out forwards;*/
+  }
+.member img, .portfolio-item img {
+    height: 150px;
+    width: 150px;
+    margin: 0.5em;
+    border-width: medium;
+    border-radius: 50%;
+}
+article{
+    text-align:justify;
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border: dotted, thin;
+}
+article h3{
+    color: maroon;
+}
