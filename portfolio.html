@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="theme-toggle">Toggle Dark Mode</button>
     <header>
         <h1>Our Portfolio</h1>
         <p>Explore our work!</p>
@@ -14,12 +15,12 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="resume.html" class="active">Resume/CV</a></li>
+            <li><a href="resume.html">Resume/CV</a></li>
         </ul>
     </nav>
-    <section>
+    <section class="cards-grid">
         <div class="portfolio-item">
             <h2>E-commerce Website</h2>
             <img src="projects/joshua_project.jpeg" alt="Joshua_Project">
@@ -52,7 +53,7 @@
             </p>
         </div>
         <div class="portfolio-item">
-            <h2>Packet Sniffing.</h2></h2>
+            <h2>Packet Sniffing</h2>
             <img src="projects/benson_project.jpeg" alt="Benson_Project">
             <h2>B. Kivuva</h2>
             <p>
@@ -83,7 +84,8 @@
         </div>
     </section>
     <footer>
-    <p>&copy; 2025 The Digital Innovators (DGI). All rights reserved.</p>
-</footer>
+        <p>&copy; 2025 The Digital Innovators (DGI). All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

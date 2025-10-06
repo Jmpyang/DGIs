@@ -1,0 +1,27 @@
+# Screenshots Directory
+
+This directory will contain screenshots for the README.md file.
+
+## Required Screenshots:
+
+- `home-page.png` - Modern team showcase with cards and animations
+- `resume-viewer.png` - Interactive resume modal with professional layout
+- `theme-toggle.png` - Light and dark theme comparison
+- `mobile-responsive.png` - Mobile version of the website
+- `portfolio-page.png` - Portfolio projects showcase
+- `blog-page.png` - Blog articles with enhanced typography
+
+## Screenshot Guidelines:
+
+- **Resolution**: 1920x1080 or higher for desktop screenshots
+- **Format**: PNG for best quality
+- **Mobile**: Use actual device screenshots when possible
+- **Browser**: Use Chrome or Firefox for consistency
+- **Theme**: Take screenshots of both light and dark themes
+
+## Tools for Screenshots:
+
+- **Desktop**: Built-in screenshot tools, Lightshot, or Greenshot
+- **Mobile**: Device native screenshot or browser dev tools
+- **Full Page**: Browser extensions like "Full Page Screen Capture"
+- **GIFs**: Use tools like LICEcap, Kap, or ScreenToGif for animations

@@ -1,0 +1,41 @@
+# Videos Directory
+
+This directory will contain demo videos for the README.md file.
+
+## Required Videos:
+
+- `demo-overview.mp4` - Full website walkthrough (2-3 minutes)
+- `resume-viewer-demo.gif` - Quick GIF showing resume modal interaction
+- `theme-toggle-demo.gif` - Theme switching animation
+- `mobile-demo.mp4` - Mobile device usage demonstration
+
+## Video Guidelines:
+
+- **Format**: MP4 for videos, GIF for short animations
+- **Resolution**: 1920x1080 for desktop, actual device resolution for mobile
+- **Duration**: Keep overview videos under 3 minutes, GIFs under 10 seconds
+- **Quality**: Balance file size with quality (aim for < 10MB for GIFs)
+- **Audio**: Optional for overview, no audio needed for GIFs
+
+## Recording Tools:
+
+- **Desktop**: OBS Studio, QuickTime (Mac), Game Bar (Windows)
+- **Screen Recording**: Loom, Screencastify, or built-in tools
+- **GIF Creation**: LICEcap, Kap, GIPHY Capture, or online converters
+- **Mobile**: Screen recording features on iOS/Android
+
+## Content Suggestions:
+
+### Demo Overview Video:
+1. Landing page with animations
+2. Navigation between sections
+3. Theme toggle demonstration
+4. Resume viewer functionality
+5. Mobile responsive design
+6. Key features highlight
+
+### Quick GIFs:
+- Resume modal opening/closing
+- Card hover effects
+- Theme switching
+- Mobile navigation

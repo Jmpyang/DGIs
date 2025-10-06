@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="theme-toggle">Toggle Dark Mode</button>
     <header>
         <h1>Our Resumes</h1>
+        <p>Download our professional resumes and CVs.</p>
     </header>
     <nav>
         <ul>
@@ -18,34 +20,67 @@
             <li><a href="resume.html" class="active">Resume/CV</a></li>
         </ul>
     </nav>
-    <section>
-        <div class="resume">
-            <h2>Joshua Pius</h2>
-            <p><a href="resumes/joshua_resume.pdf" download>Download Resume</a></p>
-        </div>
-        <div class="resume">
-            <h2>Giddy Ivutha</h2>
-            <p><a href="resumes/gideon_resume.pdf" download>Download Resume</a></p>
-        </div>
-        <div class="resume">
-            <h2>Bethwel Kipkirui</h2>
-            <p><a href="resumes/kipkirui_resume.pdf" download>Download Resume</a></p>
-        </div>
-        <div class="resume">
-            <h2>Benson Kivuva</h2>
-            <p><a href="resumes/benson_resume.pdf" download>Download Resume</a></p>
-        </div>
-        <div class="resume">
-            <h2>Gladys</h2>
-            <p><a href="resumes/gladys_resume.pdf" download>Download Resume</a></p>
-        </div>
-        <div class="resume">
-            <h2>Eunice</h2>
-            <p><a href="resumes/eunice_resume.pdf" download>Download Resume</a></p>
+    <!-- Resume Selection Cards -->
+    <section class="resume-selector">
+        <div class="member-selector-grid">
+            <div class="member-card" data-resume="joshua">
+                <img src="images/joshua.jpeg" alt="Joshua Pius">
+                <h3>Joshua Pius</h3>
+                <p>Web Developer</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
+            <div class="member-card" data-resume="giddy">
+                <img src="images/giddy.jpeg" alt="Giddy Ivutha">
+                <h3>Giddy Ivutha</h3>
+                <p>Cybersecurity Specialist</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
+            <div class="member-card" data-resume="kipkirui">
+                <img src="images/kipkirui.jpeg" alt="Bethwel Kipkirui">
+                <h3>Bethwel Kipkirui</h3>
+                <p>Data Scientist</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
+            <div class="member-card" data-resume="benson">
+                <img src="images/benson.jpeg" alt="Benson Kivuva">
+                <h3>Benson Kivuva</h3>
+                <p>AI Expert</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
+            <div class="member-card" data-resume="gladys">
+                <img src="images/gladys.jpeg" alt="Gladys Chebet">
+                <h3>Gladys Chebet</h3>
+                <p>Cloud Solutions Architect</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
+            <div class="member-card" data-resume="eunice">
+                <img src="images/eunice.jpeg" alt="Eunice Kennedy">
+                <h3>Eunice Kennedy</h3>
+                <p>Full-Stack Software Engineer</p>
+                <button class="view-resume-btn">View Resume</button>
+            </div>
         </div>
     </section>
+
+    <!-- Resume Viewer Modal -->
+    <div id="resume-modal" class="resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-header">
+                <button class="close-resume" aria-label="Close Resume">&times;</button>
+                <div class="download-options">
+                    <button class="download-pdf-btn">Download PDF</button>
+                    <button class="print-resume-btn">Print Resume</button>
+                </div>
+            </div>
+            
+            <div id="resume-content" class="resume-content">
+                <!-- Dynamic resume content will be loaded here -->
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 The Digital Innovators (DGI). All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
