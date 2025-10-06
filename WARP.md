@@ -119,11 +119,27 @@ The theme system uses a data attribute approach rather than class toggling:
 - Themes are stored as `data-theme` attribute on the HTML element
 - CSS custom properties are redefined for dark theme using `[data-theme='dark']` selector
 - System preference detection via `window.matchMedia('(prefers-color-scheme: dark)')`
+- Theme changes are persisted using `localStorage`
+
+### JavaScript Architecture
+The codebase follows a modular pattern with distinct responsibility areas:
+- `initThemeToggle()`: Theme detection and management
+- `initScrollAnimations()`: Intersection Observer for scroll-triggered animations 
+- `initCardAnimations()`: Interactive card effects with hover states and ripples
+- `initImageLazyLoading()`: Performance optimization for images
+- `initResumeViewer()`: Interactive modal for detailed resume viewing
+- `resumeDatabase`: Data structure for dynamic resume generation
 
 ### Responsive Behavior
 - Flexbox layout switches to column direction on screens < 700px
 - Card components maintain consistent spacing and sizing across breakpoints
 - Images are fixed-size (150x150px) with circular borders for visual consistency
+
+### CSS Architecture
+- Design tokens in CSS custom properties for consistent theming
+- Mobile-first responsive design using media queries
+- Component-based organization with clear separation of concerns
+- Animation system using keyframes and CSS transitions
 
 ### Navigation State
 - Active page indication through `.active` class on navigation links
@@ -133,11 +149,11 @@ The theme system uses a data attribute approach rather than class toggling:
 ## Content Guidelines
 
 ### Adding Team Members
-1. Add member photo to `images/` directory (JPEG format)
-2. Add project image to `projects/` directory  
+1. Add member photo to `images/` directory (JPEG format, 150x150px)
+2. Add project image to `projects/` directory
 3. Add resume PDF to `resumes/` directory
-4. Update all 4 HTML files with member information
-5. Follow existing formatting patterns for consistency
+4. Update all HTML files with the new member information
+5. Add the member's resume data object in `script.js` resumeDatabase
 
 ### Blog Posts
 - Use semantic `<article>` tags with `<h3>` headings
