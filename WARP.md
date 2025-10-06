@@ -37,28 +37,57 @@ The website implements a sophisticated dual-theme system:
 
 ## Development Commands
 
-### Local Development
+### Local Development Server
 ```bash
-# Serve the website locally using Python's built-in server
+# Serve the website locally using Python's built-in server (recommended)
 python3 -m http.server 8000
+# Then open: http://localhost:8000
 
 # Alternative with PHP (if available)
 php -S localhost:8000
 
-# Using Node.js live-server (if installed globally)
-npx live-server
+# Using Node.js live-server (auto-reload on changes)
+npx live-server --port=8000
+
+# Using Python with different port
+python3 -m http.server 3000
+
+# Check if server is running
+curl -I http://localhost:8000
 ```
 
 ### File Operations
 ```bash
 # Validate HTML files
-for file in *.html; do echo "Checking $file"; done
+for file in *.html; do 
+  npx html-validate "$file"
+done
 
 # Optimize images (if imagemagick is available)
-for img in images/*.jpeg; do convert "$img" -quality 85 "$img"; done
+for img in images/*.jpeg; do 
+  convert "$img" -quality 85 -resize "150x150>" "$img"
+done
 
 # Check CSS validity (if css-validator is available)
-css-validator styles.css
+npx css-validator styles.css
+
+# Performance testing
+npx lighthouse http://localhost:8000 --view
+```
+
+### Deployment Commands
+```bash
+# Deploy to GitHub Pages
+npm install -g gh-pages
+gh-pages -d . -b gh-pages
+
+# Deploy to Netlify
+npm install -g netlify-cli
+netlify deploy --prod --dir .
+
+# Deploy to Surge.sh
+npm install -g surge
+surge . your-domain.surge.sh
 ```
 
 ### Content Management
@@ -81,7 +110,7 @@ css-validator styles.css
 ### Code Structure
 - **HTML Pages**: Semantic structure with consistent navigation and footer
 - **CSS**: Modular organization with CSS custom properties for maintainability
-- **JavaScript**: Single file handling theme management and user preferences
+- **JavaScript**: Single file handling theme management, animations and resume viewer functionality
 
 ## Key Implementation Details
 
@@ -120,6 +149,40 @@ The theme system uses a data attribute approach rather than class toggling:
 - Follow format: Project title, image, team member name, description with Project/Achievement/Tools sections
 - Use consistent `<b><u>` formatting for section headers
 - Include relevant technologies and measurable achievements where possible
+
+## Testing and Validation
+
+### HTML Validation
+```bash
+# Validate individual HTML files
+npx html-validate index.html
+npx html-validate portfolio.html
+npx html-validate blog.html
+npx html-validate resume.html
+```
+
+### CSS Validation
+```bash
+# Validate CSS
+npx css-validator styles.css
+```
+
+### Performance Testing
+```bash
+# Run Lighthouse audit
+npx lighthouse http://localhost:8000 --view
+
+# Test with different devices/viewports
+# Use browser dev tools to test responsive design
+```
+
+### Browser Testing
+The website should be tested on:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome for Android)
 
 ## Technical Considerations
 
